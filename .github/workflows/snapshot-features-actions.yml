@@ -11,10 +11,9 @@ jobs:
       - name: Install JQ to parse JSON
         run: sudo apt-get install -y jq
 
-      - name: Extract metadata (tags) for Docker
+     - name: Extract metadata (tags) for Docker
         run: echo 'IMAGE_TAG=$(cat example-app/composer.json | jq .version -r)-SNAPSHOT-$GITHUB_RUN_ID' >> $GITHUB_ENV
  
-
       - name: Building Docker Image usin Dockerfile
         run: docker build -t uanderns/bootcamp:${{ env.IMAGE_TAG }} .
         
