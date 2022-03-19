@@ -20,8 +20,8 @@ jobs:
       - name: Authenticating on Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9 
         with:   #usuario e senha do 
-          username: ${{ secrets.DOCKER_LOGIN  }}
-          password: ${{ secrets.SENHA_DOCKER  }}
+          username: ${{ secrets.  }}
+          password: ${{ secrets.  }}
 
        - name: Send image to Docker Hub
          run: docker push uanderns/bootcamp:${{ env.IMAGE_TAG }}   
